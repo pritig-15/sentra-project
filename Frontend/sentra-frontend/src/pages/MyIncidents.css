@@ -1,0 +1,83 @@
+/* =========================
+   INCIDENTS CONTAINER
+========================= */
+.incidents-container {
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+/* =========================
+   TITLE
+========================= */
+.incidents-title {
+  margin-bottom: 25px;
+  color: #0d6efd;          /* Bootstrap primary blue */
+  font-size: 28px;
+  font-weight: 600;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* =========================
+   INCIDENT CARD
+========================= */
+.incident-card {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  border-left: 6px solid #0d6efd;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.incident-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   INCIDENT REFERENCE
+========================= */
+.incident-ref {
+  color: #0d6efd;
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* =========================
+   STATUS COLORS
+========================= */
+.incident-status {
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.incident-status.pending {
+  color: #856404;
+  background: #fff3cd;
+}
+
+.incident-status.resolved {
+  color: #155724;
+  background: #d4edda;
+}
+
+.incident-status.in-review {
+  color: #0c5460;
+  background: #d1ecf1;
+}
+
+/* =========================
+   EMPTY & LOADING STATES
+========================= */
+.no-incidents,
+.loading-text {
+  text-align: center;
+  font-style: italic;
+  color: #6c757d;
+  margin-top: 20px;
+}

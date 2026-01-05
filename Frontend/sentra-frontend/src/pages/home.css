@@ -1,0 +1,170 @@
+
+:root {
+  --bg-main: #f8fafc;
+  --bg-section: #ffffff;
+  --bg-muted: #f1f5f9;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+}
+
+body.dark {
+  --bg-main: #020617;
+  --bg-section: #020617;
+  --bg-muted: #020617;
+  --text-main: #e5e7eb;
+  --text-muted: #94a3b8;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+.page-container {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  background: #0f172a;
+  color: white;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-login {
+  margin-left: 10px;
+  background: transparent;
+  border: 1px solid #334155;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.nav-login:hover {
+  background: #1e293b;
+}
+
+.main-content {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  color: white;
+  padding: 110px 20px;
+  text-align: center;
+}
+
+.btn {
+  padding: 12px 30px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.primary {
+  background: #22c55e;
+  color: white;
+}
+
+.secondary {
+  background: white;
+  color: #1e40af;
+  border: 2px solid #1e40af;
+}
+
+.student,
+.staff {
+  background: white;
+  color: #1e40af;
+  border: 2px solid #cbd5f5;
+  border-radius: 14px;
+  padding: 18px 34px;
+}
+
+.features-section,
+.about-section {
+  background: var(--bg-section);
+  padding: 80px 30px;
+  text-align: center;
+}
+
+.how-section {
+  background: var(--bg-muted);
+  padding: 80px 30px;
+  text-align: center;
+}
+
+.about-section p {
+  max-width: 800px;
+  margin: auto;
+  color: var(--text-muted);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  background: #f9fafb;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.step span {
+  background: #2563eb;
+  color: white;
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, #1e40af, #1e3a8a);
+  color: white;
+  padding: 90px 30px;
+  text-align: center;
+}
+
+
+.footer {
+  padding: 25px;
+  background: #020617;
+  color: #cbd5e1;
+  text-align: center;
+}
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
