@@ -1,9 +1,5 @@
 
 
-
-
-
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../pages/AdminDashboard.css";
@@ -51,7 +47,7 @@ export default function AdminDashboard() {
         <h2>Admin Dashboard</h2>
         <div>
           <button onClick={() => navigate("/aware")}>Awareness Hub</button>
-          <button className="logout-btn" onClick={() => navigate("/admin-login")}>
+          <button className="logout-btn" onClick={() => navigate("/")}>
             Logout
           </button>
         </div>
