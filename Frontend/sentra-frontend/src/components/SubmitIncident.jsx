@@ -20,6 +20,17 @@ export default function SubmitIncident() {
   const [isAnonymous, setIsAnonymous] = useState(false);
   const [referenceId, setReferenceId] = useState("");
 
+  // ✅ NEW: Get current date and time in the format required for datetime-local input
+  const getCurrentDateTime = () => {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    return `${year}-${month}-${day}T${hours}:${minutes}`;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -103,11 +114,12 @@ export default function SubmitIncident() {
 
         <label>Date & Time</label>
         <input
-          type="datetime-local"
-          value={dateTime}
-          onChange={(e) => setDateTime(e.target.value)}
-          required
-          style={{ width: "100%", marginBottom: "10px" }}
+            type="datetime-local"
+            value={dateTime}
+            onChange={(e) => setDateTime(e.target.value)}
+            max={getCurrentDateTime()}
+            required
+            style={{ width: "100%", marginBottom: "10px" }}
         />
 
         <hr />
