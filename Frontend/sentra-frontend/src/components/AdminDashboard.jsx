@@ -8,30 +8,9 @@ export default function AdminDashboard() {
   const navigate = useNavigate();
   const { adminToken, logout } = useContext(AdminAuthContext);
 
-  const [incidents, setIncidents] = useState([]);
-  const [stats, setStats] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [search, setSearch] = useState("");
-  const [selectedIncident, setSelectedIncident] = useState(null);
-  const [statusFilter, setStatusFilter] = useState("All");
-  const [roleFilter, setRoleFilter] = useState("All");
-  const [priorityFilter, setPriorityFilter] = useState("All");
-
-  // 🔹 View State
-  const [view, setView] = useState("incidents");
-
-  // 🔹 Reviews State
-  const [reviews, setReviews] = useState([]);
-  const [reviewsLoading, setReviewsLoading] = useState(false);
-
-  // 🔹 Comments
-  const [newComment, setNewComment] = useState("");
-  const [showCommentBox, setShowCommentBox] = useState(false);
-
-  // 🔹 Resolution
-  const [resolutionNotes, setResolutionNotes] = useState("");
-  const [showResolutionModal, setShowResolutionModal] = useState(false);
-  const [incidentToClose, setIncidentToClose] = useState(null);
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "../pages/AdminDashboard.css";
 
   useEffect(() => {
     fetchIncidents();
@@ -203,7 +182,7 @@ export default function AdminDashboard() {
             Reviews
           </button>
           <button onClick={() => navigate("/aware")}>Awareness Hub</button>
-          <button className="logout-btn" onClick={() => { logout(); navigate("/"); }}>
+          <button className="logout-btn" onClick={() => navigate("/")}>
             Logout
           </button>
         </div>
