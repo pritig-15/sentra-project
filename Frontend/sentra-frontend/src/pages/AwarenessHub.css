@@ -216,3 +216,62 @@
     padding: 35px 25px;
   }
 }
+
+/* ==================== DARK MODE : AWARENESS HUB ==================== */
+
+body.dark .awareness {
+  background: linear-gradient(
+    135deg,
+    #08144a 0%,
+    #202d4b 50%,
+    #1e293b 100%
+  );
+}
+
+/* Background shapes darker & subtle */
+body.dark .awareness::before,
+body.dark .awareness::after {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Header text */
+body.dark .awareness-header {
+  color: #f8fafc;
+}
+
+/* Section card */
+body.dark .section {
+  background: #020617;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+}
+
+/* Section headings */
+body.dark .section h2,
+body.dark .policy-content h3 {
+  color: #c7d2fe;
+}
+
+/* Paragraphs & list text */
+body.dark .section p,
+body.dark .section ul,
+body.dark .section li,
+body.dark .policy-content ul {
+  color: #cbd5e1;
+}
+
+/* Helpline text */
+body.dark .helplines p {
+  color: #e5e7eb;
+}
+
+/* Navbar */
+body.dark .awareness-navbar {
+  background-color: #020617;
+}
+
+/* Buttons hover fix */
+body.dark .navbar-actions .nav-btn:hover {
+  background-color: #1e293b;
+  color: #e0e7ff;
+}
+

@@ -13,8 +13,17 @@ export default function Home() {
   const navigate = useNavigate();
 
   const toggleDarkMode = () => {
-    document.body.classList.toggle("dark");
+  const isDark = document.body.classList.toggle("dark");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
   };
+
+  useEffect(() => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+  }
+}, []);
+
 
   // ✅ Fetch ONLY approved reviews from backend
   useEffect(() => {
@@ -79,10 +88,8 @@ export default function Home() {
   return (
     <div className="page-container">
       <nav className="navbar">
-        <div className="nav-left"></div>
-
-        <div className="nav-center">
-          <span className="logo-text">Sentra System</span>
+        <div className="nav-left">
+          <span className="logo-text">SENTRA</span>
         </div>
 
         <div className="nav-right">
@@ -105,7 +112,7 @@ export default function Home() {
       </nav>
 
       <main className="main-content reveal">
-        <h1>Incident Reporting & Safety Management</h1>
+        <h1>Incident Reporting & Response Dashboard for Educational Institutions</h1>
         <p>
           A secure platform for students and staff to report incidents and
           maintain a safe educational environment.

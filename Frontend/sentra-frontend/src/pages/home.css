@@ -40,9 +40,16 @@ body {
   color: white;
 }
 
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
 .logo-text {
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: white;
 }
 
 .nav-login {
